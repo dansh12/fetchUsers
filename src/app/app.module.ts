@@ -21,6 +21,8 @@ import { AllInfoComponent } from './components/all-info/all-info.component';
 import { MatCardModule } from '@angular/material/card';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import {MatSortModule} from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { FormsModule } from '@angular/forms';
     MatSelectModule,
     MatDialogModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
