@@ -1,0 +1,38 @@
+.elements-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 20px 0px;
+}
+#search-filter{
+    margin: 3px 5px;
+    height: 52px;
+}
+.mat-column-id{
+    padding: 0px 20px;
+    width: 20px;
+}
+.mat-column-name{
+    padding: 0px 20px;
+    width: 20px;
+}
+.mat-column-username{
+    padding: 0px 20px;
+    width: 20px;
+}
+.mat-column-email{
+    padding: 0px 20px;
+    width: 20px;
+}
+.mat-column-phone{
+    padding: 0px 20px;
+    width: 150px;
+}
+.mat-column-website{
+    padding: 0px 20px;
+    width: 20px;
+}
+.mat-row:hover .mat-cell {
+    border-color: black;
+    cursor: pointer;
+}

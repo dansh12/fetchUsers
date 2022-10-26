@@ -1,0 +1,44 @@
+<mat-dialog-content class="mat-typography">
+    <h3>{{data.user.name}}</h3>
+    <div class="split">
+        <p>id: </p>
+        <p>{{data.user.id}}</p>
+    </div>
+    <div class="split">
+        <p>username: </p>
+        <p>{{data.user.username}}</p>
+    </div>
+    <div class="split">
+        <p>email: </p>
+        <p>{{data.user.email}}</p>
+    </div>
+    <div class="split">
+        <p>adress: </p>
+        <p>{{data.user.address.street}}, {{data.user.address.suite}}, {{data.user.address.city}}, {{data.user.address.zipcode}}</p>
+    </div>
+    <div class="split">
+        <p>geo: </p>
+        <p>{{data.user.address.geo.lat}}, {{data.user.address.geo.lng}}</p>
+    </div>
+    <div class="split">
+        <p>phone: </p>
+        <p>{{data.user.phone}}</p>
+    </div>
+    <div class="split">
+        <p>website: </p>
+        <p>{{data.user.website}}</p>
+    </div>
+    <div class="split">
+        <p>company name: </p>
+        <p>{{data.user.company.name}}</p>
+    </div>
+    <div class="split">
+        <p>company catchphrase: </p>
+        <p>{{data.user.company.catchPhrase}}</p>
+    </div>
+    <div class="split">
+        <p>company bs: </p>
+        <p>{{data.user.company.bs}}</p>
+    </div>
+
+</mat-dialog-content>
