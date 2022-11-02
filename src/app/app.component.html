@@ -1,1 +1,7 @@
-<app-layout></app-layout>
+<div *ngIf="isDataLoaded">
+    <button mat-raised-button class="presentation-options" *ngIf="isTable" routerLink="/cards-layout-component"
+        routerLinkActive="active" (click)="isTable = !isTable">cards</button>
+    <button mat-raised-button class="presentation-options" *ngIf="!isTable" routerLink="/table-layout-component"
+        routerLinkActive="active" (click)="isTable = !isTable">table</button>
+    <router-outlet></router-outlet>
+</div>

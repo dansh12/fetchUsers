@@ -5,40 +5,35 @@
             <input matInput type="text" placeholder="Search" [(ngModel)]="search">
             <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
-        <mat-form-field id="search-filter" appearance="fill">
-            <mat-label>Search by</mat-label>
-            <mat-select [(value)]="selected">
-                <mat-option value="name">name</mat-option>
-                <mat-option value="username">username</mat-option>
-                <mat-option value="email">email</mat-option>
-            </mat-select>
-        </mat-form-field>
     </div>
     <mat-divider></mat-divider>
     <div class="elements-center">
-        <table mat-table [dataSource]="userInfoSorted | filter:search:selected" class="mat-elevation-z8" matSort (matSortChange)="sortData($event)">
+        <table mat-table [dataSource]="userInfoSorted | filter:search" class="mat-elevation-z8" matSort
+            (matSortChange)="sortData($event)">
             <ng-container matColumnDef="id">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by id"> id </th>
                 <td mat-cell *matCellDef="let element"> {{element.id}} </td>
             </ng-container>
-            <ng-container matColumnDef="name" >
+            <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> name </th>
                 <td mat-cell *matCellDef="let element"> {{element.name}} </td>
             </ng-container>
-            <ng-container matColumnDef="username" >
-                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by username"> username </th>
+            <ng-container matColumnDef="username">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by username"> username
+                </th>
                 <td mat-cell *matCellDef="let element"> {{element.username}} </td>
             </ng-container>
             <ng-container matColumnDef="email">
-                <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by email"> email </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by email"> email </th>
                 <td mat-cell *matCellDef="let element"> {{element.email}} </td>
             </ng-container>
             <ng-container matColumnDef="phone">
-                <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by phone"> phone </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by phone"> phone </th>
                 <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
             </ng-container>
             <ng-container matColumnDef="website">
-                <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by website"> website </th>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by website"> website
+                </th>
                 <td mat-cell *matCellDef="let element"><a href={{element.website}}> {{element.website}} </a></td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

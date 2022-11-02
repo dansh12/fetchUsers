@@ -4,15 +4,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserInfoService } from 'src/app/services/user-info/user-info.service';
-import { AllInfoComponent } from '../all-info/all-info.component';
+import { UserDetailsComponent } from '../user-details/user-details.component';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  selector: 'app-table-layout',
+  templateUrl: './table-layout.component.html',
+  styleUrls: ['./table-layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
-  userInfo = this.userInfoService.getUsers();
+export class TableLayoutComponent implements OnInit {
+  userInfo =this.userInfoService.getUsers();
   displayedColumns: string[] = ['id', 'name', 'username', 'email', 'phone', 'website'];
   selected = 'name';
   search = '';
@@ -36,6 +36,7 @@ export class LayoutComponent implements OnInit {
     } else {
       this.displayedColumns = ['id', 'name', 'username', 'email', 'phone', 'website'];
     }
+    
   }
 
   
@@ -57,7 +58,7 @@ export class LayoutComponent implements OnInit {
  
 
   openAllInfo(id: number) {
-    this.dialog.open(AllInfoComponent, { width: '450px', data: { user: this.userInfo[this.userInfo.findIndex(user => { return user.id == id })] } });
+    this.dialog.open(UserDetailsComponent, { width: '450px', data: { user: this.userInfo[this.userInfo.findIndex((user:any) => { return user[id] == id })] } });
   }
 
   sortData(sort: Sort) {
@@ -67,7 +68,7 @@ export class LayoutComponent implements OnInit {
       return;
     }
 
-    this.userInfoSorted = data.sort((a, b) => {
+    this.userInfoSorted = data.sort((a:any, b:any) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
         case 'id':
@@ -89,5 +90,8 @@ export class LayoutComponent implements OnInit {
     function compare(a: number | string, b: number | string, isAsc: boolean) {
       return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
     }
+  }
+  check(){
+    console.log(this.userInfo);
   }
 }

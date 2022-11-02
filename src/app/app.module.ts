@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { TableLayoutComponent } from './components/table-layout/table-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,23 +18,29 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AllInfoComponent } from './components/all-info/all-info.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { MatCardModule } from '@angular/material/card';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import {MatSortModule} from '@angular/material/sort';
+import { CardsLayoutComponent } from './components/cards-layout/cards-layout.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { UserInfoService } from './services/user-info/user-info.service';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
-    AllInfoComponent,
-    FilterPipe
+    TableLayoutComponent,
+    UserDetailsComponent,
+    FilterPipe,
+    CardsLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -48,7 +55,8 @@ import {MatSortModule} from '@angular/material/sort';
     MatDialogModule,
     MatCardModule,
     FormsModule,
-    MatSortModule
+    MatSortModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

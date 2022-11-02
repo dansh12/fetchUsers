@@ -1,0 +1,40 @@
+.elements-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 20px 0px;
+}
+#search-filter{
+    margin: 3px 5px;
+    height: 52px;
+}
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 285px;
+    margin: 20px 20px;
+}
+.user-property{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.space-between{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.user-data{
+    width: 180px;
+}
+mat-card-title{
+    p{
+        padding-top: 2px;
+    }
+}
+.more-details:hover{
+    cursor: pointer;
+}

@@ -6,8 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: Array<any>, filterName: string, attribute: string){
-    return value.filter((item:any)=> {return item[attribute].toLowerCase().includes(filterName.toLowerCase())})
+  transform(value: Array<any>, filterName: string){
+    return value.filter((item:any)=> {return item['name'].toLowerCase().includes(filterName.toLowerCase())||
+    item['username'].toLowerCase().includes(filterName.toLowerCase())||
+    item['email'].toLowerCase().includes(filterName.toLowerCase())})
   }
 
 }
