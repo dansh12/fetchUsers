@@ -7,10 +7,10 @@
 </div>
 <mat-divider></mat-divider>
 <div class="wrap">
-    <div *ngFor="let user of userInfo">
+    <div *ngFor="let user of userInfo |filter:search">
         <mat-card class="card">
             <mat-card-title class="space-between">
-                <p>{{user.name}}</p>
+                <p class="ellipsis">{{user.name}}</p>
                 <mat-icon class="more-details" (click)="openAllInfo(user.id)">info</mat-icon>
             </mat-card-title>
             <mat-card-content>

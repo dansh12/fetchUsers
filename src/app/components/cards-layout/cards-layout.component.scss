@@ -1,40 +1,56 @@
-.elements-center{
+.elements-center {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 20px 0px;
 }
-#search-filter{
+
+#search-filter {
     margin: 3px 5px;
     height: 52px;
 }
-.wrap{
+
+.wrap {
     display: flex;
     flex-wrap: wrap;
 }
-.card{
+
+.card {
     width: 285px;
     margin: 20px 20px;
 }
-.user-property{
-    display:flex;
+
+.user-property {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.space-between{
-    display:flex;
+
+.space-between {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.user-data{
+
+.user-data {
     width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-mat-card-title{
-    p{
+
+mat-card-title {
+    p {
         padding-top: 2px;
     }
 }
-.more-details:hover{
+
+.more-details:hover {
     cursor: pointer;
+}
+.ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

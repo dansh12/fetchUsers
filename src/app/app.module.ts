@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -22,10 +22,11 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { MatCardModule } from '@angular/material/card';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
-import {MatSortModule} from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
 import { CardsLayoutComponent } from './components/cards-layout/cards-layout.component';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { UserInfoService } from './services/user-info/user-info.service';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -56,7 +57,8 @@ import { UserInfoService } from './services/user-info/user-info.service';
     MatCardModule,
     FormsModule,
     MatSortModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
